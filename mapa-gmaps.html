@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Mapa de Google Maps</title>
+<meta name="Description" content="Mapa elemental de Google Maps para usarlo desde la PC, que se muestra a todo lo ancho y alto del navegador e incluye un cuadro de b&#250;squeda.">
+<meta name ="author" content ="Norfi Carrodeguas">
+<style type="text/css" media="screen">
+<!--
+html,body{height:100%;margin:0;padding:0;}
+#map{height:96%;}
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=es&callback=iniciar"></script>
+
+<script>
+function iniciar() {
+var mapOptions = {
+center: new google.maps.LatLng(10.0823632, -84.31737749999999),
+zoom: 10,
+mapTypeId: google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("map"),mapOptions);}
+</script>
+
+<div id="map"></div>
+<form style="float:left;" action="https://maps.google.com/?q=" method="get">
+<input type="text" name="q" value="">
+<input type="submit" value="Buscar en Google Maps">
+</form>
+<div style="float:right;">
+Mas info: <a href="http://norfipc.com/" target="_blank">NorfiPC</a></div>
+</body>
+</html>
